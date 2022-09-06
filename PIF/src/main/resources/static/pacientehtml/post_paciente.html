@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Alta de paciente</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/js/pacientejs/post_paciente.js"></script>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="..\index.html">Inicio</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Odontólogos
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="/odontologohtml/get_all_odontologo.html">Listar Odontólogos</a>
+                    <a class="dropdown-item" href="/odontologohtml/post_odontologo.html">Agregar Odontólogo</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Pacientes
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="/pacientehtml/get_all_paciente.html">Listar Pacientes</a>
+                    <a class="dropdown-item" href="/pacientehtml/post_paciente.html">Agregar Pacientes</a>
+                </div>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Turnos
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="/turnohtml/get_all_turno.html">Listar Turnos</a>
+                    <a class="dropdown-item" href="/turnohtml/post_turno.html">Agregar Turnos</a>
+                </div>
+            </li>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-7">
+            <h2>Agregar Paciente</h2>
+            <form id="add_new_paciente">
+                <div class="form-group">
+                    <label class="control-label" for="apellido">Apellido:</label>
+                    <input type="text" class="form-control" id="apellido"
+                           placeholder="Ingrese el valor del apellido" name="apellido" required>
+                </div>
+                <div class="form-group">
+                    <label class="control-label" for="nombre">Nombre:</label>
+                    <input type="text" class="form-control" id="nombre"
+                           placeholder="Ingrese el valor del nombre" name="nombre" required>
+                </div>
+                <div class="form-group">
+                    <label class="control-label" for="email">Email:</label>
+                    <input type="text" class="form-control" id="email"
+                           placeholder="Ingrese el email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label" for="dni">DNI:</label>
+                    <input type="text" class="form-control" id="dni"
+                           placeholder="Ingrese el dni" name="dni" required>
+                </div>
+                <div class="form-group">
+                    <label class="control-label" for="fechaIngreso">Fecha de Ingreso:</label>
+                    <input type="text" class="form-control" id="fechaIngreso"
+                           placeholder="Ingrese fecha de ingreso" name="fechaIngreso" required>
+                </div>
+                <div class="form-group">
+                    <label class="control-label" for="calle">Calle del domicilio:</label>
+                    <input type="text" class="form-control" id="calle"
+                           placeholder="Ingrese la calle" name="calle" required>
+                </div>
+                <div class="form-group">
+                    <label class="control-label" for="numero">Numero del domicilio:</label>
+                    <input type="text" class="form-control" id="numero"
+                           placeholder="Ingrese el numero" name="numero" required>
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label" for="localidad">Localidad:</label>
+                    <input type="text" class="form-control" id="localidad"
+                           placeholder="Ingrese la localidad" name="localidad" required>
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label" for="provincia">Provincia:</label>
+                    <input type="text" class="form-control" id="provincia"
+                           placeholder="Ingrese la provincia" name="provincia" required>
+                </div>
+                <button type="submit" class="btn btn-success" id="btn-add-new-paciente">Dar de alta</button>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>
